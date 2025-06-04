@@ -19,7 +19,7 @@
         @forelse($rentals as $rental)
             <tr>
                 <td>{{ $rental->stall->stall_number }}</td>
-                <td>{{ $rental->tenant->name }}</td>
+                <td>{{ $rental->tenant_name }}</td>
                 <td>{{ $rental->rental_date->format('M d, Y') }}</td>
                 <td>{{ number_format($rental->amount, 2) }}</td>
                 <td>

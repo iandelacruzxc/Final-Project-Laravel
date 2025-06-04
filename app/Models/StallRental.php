@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class StallRental extends Model
 {
-    protected $fillable = ['stall_id', 'tenant_id', 'rental_date', 'amount', 'is_paid'];
+    protected $fillable = ['stall_id', 'tenant_name', 'rental_date', 'amount', 'is_paid'];
     protected $dates = ['rental_date'];
     protected $casts = [
         'rental_date' => 'date', // This line fixes the issue
