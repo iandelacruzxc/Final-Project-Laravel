@@ -19,7 +19,7 @@
             <div>{{ $stall->stall_number }}</div>
 
             @if($rental)
-                <div class="mt-2">{{ $rental->tenant->name }}</div>
+                <div class="mt-2">{{ $rental->tenant_name }}</div>
             @else
                 <a href="{{ route('stall.assign', $stall->id) }}" 
                    class="btn btn-light btn-sm mt-2 px-3" 
