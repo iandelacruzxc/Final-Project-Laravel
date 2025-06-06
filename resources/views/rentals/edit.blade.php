@@ -11,17 +11,6 @@
                 @csrf
                 @method('PUT')
 
-                {{-- <div class="mb-3">
-                    <label for="stall_id" class="form-label">Stall</label>
-                    <select name="stall_id" id="stall_id" class="form-select" required>
-                        @foreach ($stalls as $stall)
-                            <option value="{{ $stall->id }}" {{ $stall->id == $rental->stall_id ? 'selected' : '' }}>
-                                {{ $stall->stall_number }}
-                            </option>
-                        @endforeach
-                    </select>
-                </div> --}}
-
                 <div class="mb-3">
                     <label for="tenant_name" class="form-label">Tenant Name</label>
                     <input type="text" name="tenant_name" id="tenant_name" class="form-control"

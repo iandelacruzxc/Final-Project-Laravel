@@ -12,24 +12,6 @@
             Today's Total Earnings: <strong>₱{{ number_format($totalEarnings, 2) }}</strong>
         </div>
 
-        {{-- Flash login message from session
-        @if (session('login_success'))
-            <div id="login-message" class="alert alert-success">
-                {{ session('login_success') }}
-            </div>
-
-            <script>
-                setTimeout(() => {
-                    const msg = document.getElementById('login-message');
-                    if (msg) {
-                        msg.style.transition = "opacity 0.5s ease";
-                        msg.style.opacity = 0;
-                        setTimeout(() => msg.remove(), 500);
-                    }
-                }, 3000);
-            </script>
-        @endif --}}
-
         <div class="row">
             @foreach ($stalls as $stall)
                 @php

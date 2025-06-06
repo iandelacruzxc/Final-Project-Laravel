@@ -3,11 +3,11 @@
 @section('title', 'Rental History')
 
 @section('content')
-<div class="container-fluid px-5 my-4"> {{-- ✅ Less side margin, still some spacing --}}
+<div class="container py-4">
     <h1 class="fw-bold mb-4">Rental History</h1>
 
     <div class="table-responsive">
-        <table class="table table-bordered table-hover align-middle bg-white">
+        <table class="table table-bordered table-hover table-striped align-middle bg-white">
             <thead class="table-dark text-center">
                 <tr>
                     <th>Stall</th>

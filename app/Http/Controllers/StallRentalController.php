@@ -38,7 +38,7 @@ class StallRentalController extends Controller
             'contact' => $request->contact,
             'rental_date' => $request->rental_date,
             'amount' => $request->amount,
-            'is_paid' => $request->has('is_paid'),
+            'is_paid' => $request->boolean('is_paid'),
         ]);
 
         return redirect()->route('rentals.index')->with('success', 'Rental added successfully!');
@@ -73,7 +73,7 @@ class StallRentalController extends Controller
             'contact' => $request->contact,
             'rental_date' => $request->rental_date,
             'amount' => $request->amount,
-            'is_paid' => $request->input('is_paid'),
+            'is_paid' => $request->boolean('is_paid'),
         ]);
 
         return redirect()->route('stalls.history')->with('success', 'Rental updated successfully!');
