@@ -6,10 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class StallRental extends Model
 {
-    protected $fillable = ['stall_id', 'tenant_name', 'rental_date', 'amount', 'is_paid'];
+    protected $fillable = ['stall_id', 'tenant_name', 'contact', 'rental_date', 'amount', 'is_paid'];
+
     protected $dates = ['rental_date'];
+
     protected $casts = [
-        'rental_date' => 'date', // This line fixes the issue
+        'rental_date' => 'date',
         'is_paid' => 'boolean',
     ];
 
@@ -17,6 +19,7 @@ class StallRental extends Model
     {
         return $this->belongsTo(Stall::class);
     }
+    // In App\Models\StallRental.php
 
     public function tenant()
     {
@@ -24,4 +27,3 @@ class StallRental extends Model
     }
 
 }
-

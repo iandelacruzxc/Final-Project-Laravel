@@ -12,9 +12,10 @@ class StallController extends Controller
     {
         $stalls = Stall::with(['todayRental.tenant'])->get();
 
-        $totalEarnings = StallRental::whereDate('rental_date', today())->sum('amount');
+        $totalEarnings = StallRental::whereDate('rental_date', today())->where('is_paid', true)->sum('amount');
 
         return view('stalls.index', compact('stalls', 'totalEarnings'));
+        
     }
     public function history()
 {
