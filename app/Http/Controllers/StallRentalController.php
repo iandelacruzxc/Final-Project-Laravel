@@ -44,12 +44,6 @@ class StallRentalController extends Controller
         return redirect()->route('rentals.index')->with('success', 'Rental added successfully!');
     }
 
-    // public function edit(StallRental $rental)
-    // {
-    //     // $stalls = Stall::all();
-    //     // return view('rentals.edit', compact('rental', 'stalls'));
-    // }
-
     public function edit($id)
     {
         $rental = StallRental::with('stall')->findOrFail($id);

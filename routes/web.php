@@ -1,10 +1,13 @@
 <?php
 
+use App\Models\Stall;
+use App\Models\StallRental;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\StallController;
 use App\Http\Controllers\StallRentalController;
 use App\Http\Controllers\CustomResetPasswordController;
+use App\Http\Controllers\DashboardController;
 
 // FRONT PAGE
 Route::get('/', function () {
@@ -35,3 +38,7 @@ Route::get('/password/reset-direct', function () {
 })->name('password.reset.direct');
 
 Route::post('/password/reset-direct', [CustomResetPasswordController::class, 'update'])->name('password.reset.direct.submit');
+
+
+// dashboard
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth')->name('dashboard');
