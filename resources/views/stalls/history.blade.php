@@ -3,8 +3,8 @@
 @section('title', 'Rental History')
 
 @section('content')
-<div class="container py-4">
-    <h1 class="fw-bold mb-4">Rental History</h1>
+<div class="container py-0">
+    <h2 class="mb-4 text-center fw-bold display-6">Rental History</h2>
 
     <div class="table-responsive">
         <table class="table table-bordered table-hover table-striped align-middle bg-white">

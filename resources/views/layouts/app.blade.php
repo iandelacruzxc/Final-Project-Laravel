@@ -128,8 +128,10 @@
     @endif
 
     {{-- Main Content --}}
-    <main class="container py-4">
-        @yield('content')
+    <main class="py-4"> {{-- Reduce vertical padding here --}}
+        <div class="container">
+            @yield('content')
+        </div>
     </main>
 
     <!-- Bootstrap JS -->

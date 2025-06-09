@@ -4,7 +4,8 @@
 
 @section('content')
     <div class="container">
-        <h2 class="mb-4">Dashboard</h2>
+        <h2 class="mb-4 text-center fw-bold display-6">Dashboard</h2>
+
 
         {{-- 🔹 Key Stats Row --}}
         <div class="row mb-4">
